@@ -1,4 +1,5 @@
 import avatar from './img/profile-av.jpg'
+import headerImg from './img/agfx-chr.png'
 import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
@@ -13,7 +14,7 @@ function App() {
     <div className="App font-jost bg-neutral-800">
       <nav className="flex justify-between items-center p-8 sm:px-16 bg-neutral-900 text-white fixed top-0 w-full z-10">
         <span className='flex items-center gap-3'>
-          <img src="src/img/agfx-chr.png" alt="" className='w-10' />
+          <img src={headerImg} alt="" className='w-10' />
           <h1 className=" text-2xl md:text-3xl font-bold">Allen GFX</h1>
         </span>
         
