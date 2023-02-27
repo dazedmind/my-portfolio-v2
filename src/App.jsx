@@ -13,7 +13,7 @@ function App() {
     <div className="App font-jost bg-neutral-800">
       <nav className="flex justify-between items-center p-8 sm:px-16 bg-neutral-900 text-white fixed top-0 w-full z-10">
         <span className='flex items-center gap-3'>
-          <img src="/src/img/agfx-chr.png" alt="" className='w-10' />
+          <img src="src/img/agfx-chr.png" alt="" className='w-10' />
           <h1 className=" text-2xl md:text-3xl font-bold">Allen GFX</h1>
         </span>
         
@@ -31,7 +31,7 @@ function App() {
         <FaBars className='text-2xl md:hidden'/>
       </nav>
 
-      <section className=" bg-gradient-to-b from-neutral-900 to-neutral-800 h-screen lg:mt-12 text-white">
+      <section className=" bg-gradient-to-b from-neutral-900 to-neutral-800 h-screen lg:mt-10 xl:mt-12 text-white">
         <div className='flex flex-col-reverse lg:flex-row justify-around items-center pt-64 lg:pt-80 px-10 gap-14'>
           <div>
             <h3 className='text-2xl lg:text-4xl'>I am</h3>
@@ -41,7 +41,7 @@ function App() {
 
           <img src={avatar} alt="av" className=' rounded-full w-44'/>
         </div>
-        <span className='flex justify-center mt-32 lg:mt-72 items-center'>
+        <span className='flex justify-center mt-32 md:mt-36 lg:mt-32 items-center'>
           <RxDoubleArrowDown className='text-3xl animate-bounce z-0'/>
         </span>
       </section>
