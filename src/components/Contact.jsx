@@ -13,7 +13,7 @@ function Contact() {
                 
             
                 <span className='flex flex-col items-center'>
-                    <input type="button" value="Send" className='bg-mustard rounded-md  px-4 py-1 cursor-pointer'/>
+                    <input type="submit" value="Send" className='bg-mustard rounded-md  px-4 py-1 cursor-pointer'/>
                 </span>
             </form>
         </div>
