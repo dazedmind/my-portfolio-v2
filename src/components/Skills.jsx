@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaHtml5, FaJs, FaReact, FaGitAlt, FaPython, FaFigma} from 'react-icons/fa'
-import { SiTailwindcss, SiGnubash, SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
+import { FaHtml5, FaJs, FaReact, FaGitAlt, FaPython, FaFigma, FaNpm, FaNodeJs } from 'react-icons/fa'
+import { SiTailwindcss, SiGnubash, SiAdobephotoshop, SiAdobeillustrator, SiCplusplus } from "react-icons/si";
 
 function Skills () {
     return (
@@ -36,6 +36,18 @@ function Skills () {
                 <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
                     <FaPython />
                     <p>Python</p>
+                </li>
+                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
+                    <SiCplusplus />
+                    <p>C++</p>
+                </li>
+                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
+                    <FaNpm />
+                    <p>npm</p>
+                </li>
+                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
+                    <FaNodeJs />
+                    <p>NodeJs</p>
                 </li>
             </span>
 

@@ -9,4 +9,10 @@
         width: 100vw;
         height: auto;
     }
+    .ext-link:hover .arrow-link{
+        visibility: visible;
+    }
+    .arrow-link {
+        pointer-events: none
+    }
 }
