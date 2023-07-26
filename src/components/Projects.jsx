@@ -18,7 +18,7 @@ function Projects() {
             <Card img={metro} name="Metro" description="A mockup user interface for an online metrocard train system" link="https://www.behance.net/gallery/150317913/Metro"/>
         </div>
         <span className='flex flex-col text-center items-center align-middle'>
-          <button onClick={gotoLink} className='bg-mustard px-3 py-1 rounded-md mt-6'>
+          <button onClick={gotoLink} className='bg-mustard px-3 py-1 rounded-md mt-6 font-bold'>
             Show More
           </button>
         </span>
