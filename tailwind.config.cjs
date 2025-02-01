@@ -12,13 +12,22 @@ module.exports = {
       },
       colors: {
         'mustard': '#d3a04d',
-        'wood': '#a43c23'
+        'wood': '#a43c23',
+        'yale-blue': '#134074',
+        'berk-blue': '#13315C',
+        'oxford-blue': '#0B2545',
+        'powder-blue': '#8DA9C4',
+        'mint-blue': '#EEF4ED',
+        'pine-green': '#136F63',
+        'auburn': '#A22C29',
+        'russian-violet': '#47316E',
       },
       width: {
         'half': '50%',
         'mx-100': 'margin-left:30rem; margin-right:30rem',
         '30r': '30rem',
-        '20r': '40rem'
+        '20r': '40rem',
+        'w-150': '78rem',
       },
       height: {
         '90p': '90%'
