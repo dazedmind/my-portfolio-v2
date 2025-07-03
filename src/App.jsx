@@ -8,13 +8,13 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ScrollToTop from './ScrollToTop'; // import the ScrollToTop component
 import NavBar from "./components/NavBar";
+import Aurora from "./components/reactbits/Aurora";
 
 function App() {
   return (
     <Router> 
       <div className="App font-inter bg-midnight">
         <NavBar />
-
         {/* Route Pages */}
         <ScrollToTop />
         <Routes>

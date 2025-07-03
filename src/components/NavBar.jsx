@@ -32,7 +32,7 @@ const NavBar = () => {
   }, [location.pathname]);
 
   return (
-    <nav className="flex justify-center items-center align-middle rounded-full w-auto max-w-3xl p-8 sm:px-16 bg-neutral-900/30 backdrop-blur-md text-white fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
+    <nav className="flex justify-center items-center align-middle rounded-full w-auto max-w-2xl p-4 px-8 bg-neutral-900/30 backdrop-blur-md text-white fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
       <div className="relative w-full">
         <ul className="flex gap-11 text-xl items-center relative mb-1.5">
           {navItems.map((item, idx) => (

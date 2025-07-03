@@ -10,7 +10,7 @@ function Skills () {
         <div className='w-full h-px bg-neutral-700 my-4'></div>
 
         <ul className='flex flex-col text-white text-md md:text-lg gap-8'>
-            <span className='flex items-center flex-wrap gap-4'>
+            <span className='flex items-center flex-wrap gap-2'>
                 <h1 className=' text-wood font-bold'>Technology</h1>
                 <SkillTags icon={<FaHtml5 />} name="HTML" />
                 <SkillTags icon={<SiTailwindcss />} name="CSS/Tailwind CSS" />
@@ -34,7 +34,7 @@ function Skills () {
                
             </span>
 
-            <span className='flex items-center flex-wrap gap-4'>
+            <span className='flex items-center flex-wrap gap-2'>
                 <h1 className=' text-wood font-bold'>Designing</h1>
                 <SkillTags icon={<SiAdobephotoshop />} name="Photoshop" />
                 <SkillTags icon={<SiAdobeillustrator />} name="Illustrator" />
@@ -43,7 +43,7 @@ function Skills () {
        
             </span>
 
-            <span className='flex items-center flex-wrap gap-4'>
+            <span className='flex items-center flex-wrap gap-2'>
                 <h1 className=' text-wood font-bold'>Tools/Others</h1>
                 <SkillTags icon={<SiMicrosoftoffice />} name="MS Office" />
                 <SkillTags icon={<SiObsstudio />} name="OBS Studio" />
