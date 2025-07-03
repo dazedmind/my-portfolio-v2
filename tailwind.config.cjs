@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'jost': "Jost",
+        'inter': "Inter",
         'chakra': "Chakra Petch"
       },
       colors: {
@@ -21,6 +21,7 @@ module.exports = {
         'pine-green': '#136F63',
         'auburn': '#A22C29',
         'russian-violet': '#47316E',
+        'midnight': '#121212',
       },
       width: {
         'half': '50%',

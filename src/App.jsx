@@ -2,34 +2,33 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
 } from "react-router-dom";
 import ProjectPage from "./pages/ProjectPage";
-import headerImg from "./img/agfx-chr.png";
-import { FaBars } from "react-icons/fa";
-import Skills from "./components/Skills";
-import { RxDoubleArrowDown } from "react-icons/rx";
 import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 import ScrollToTop from './ScrollToTop'; // import the ScrollToTop component
 import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <Router> 
-      <div className="App font-chakra bg-neutral-800">
+      <div className="App font-inter bg-midnight">
         <NavBar />
-
 
         {/* Route Pages */}
         <ScrollToTop />
         <Routes>
+          <Route
+            path="/"
+            element={<AboutPage />}
+          />
           <Route 
             path="/projects" 
             element={<ProjectPage />} 
           />
-          <Route
-            path="/"
-            element={<AboutPage />}
+          <Route 
+            path="/contact" 
+            element={<ContactPage />} 
           />
         </Routes>
 

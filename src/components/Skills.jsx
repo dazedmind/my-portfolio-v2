@@ -1,98 +1,54 @@
 import React from 'react';
 import { FaHtml5, FaJs, FaReact, FaGitAlt, FaPython, FaFigma, FaNpm, FaNodeJs, FaPhp } from 'react-icons/fa'
-import { SiTailwindcss, SiGnubash, SiAdobephotoshop, SiAdobeillustrator, SiCplusplus, SiMicrosoftoffice, SiObsstudio, SiVite, SiCanva, SiNotion} from "react-icons/si";
+import { SiTailwindcss, SiGnubash, SiAdobephotoshop, SiAdobeillustrator, SiCplusplus, SiMicrosoftoffice, SiObsstudio, SiVite, SiCanva, SiNotion, SiJirasoftware} from "react-icons/si";
+import SkillTags from './SkillTags'
 
 function Skills () {
     return (
-    <div className='bg-neutral-900 p-8 rounded-xl w-auto'>
-        <h1 className='text-3xl pb-4 text-mustard font-bold'>/skills</h1>
+    <div className='bg-midnight p-8 w-5/6 md:w-3/4 rounded-lg border-2 border-neutral-700'>
+        <h1 className='text-3xl text-mustard font-bold'>Skills</h1>
+        <div className='w-full h-px bg-neutral-700 my-4'></div>
+
         <ul className='flex flex-col text-white text-md md:text-lg gap-8'>
             <span className='flex items-center flex-wrap gap-4'>
                 <h1 className=' text-wood font-bold'>Technology</h1>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <FaHtml5 />
-                    <p>HTML</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <SiTailwindcss />
-                    <p>CSS/Tailwind CSS</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <FaJs />
-                    <p>JavaScript</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <FaPhp />
-                    <p>PHP</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <FaReact />
-                    <p>React</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <SiGnubash />
-                    <p>Bash</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <FaGitAlt />
-                    <p>Git</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <FaPython />
-                    <p>Python</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <SiCplusplus />
-                    <p>C++</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <FaNpm />
-                    <p>npm</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <FaNodeJs />
-                    <p>NodeJs</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <SiVite />
-                    <p>Vite</p>
-                </li>
+                <SkillTags icon={<FaHtml5 />} name="HTML" />
+                <SkillTags icon={<SiTailwindcss />} name="CSS/Tailwind CSS" />
+                <SkillTags icon={<FaJs />} name="JavaScript" />
+                <SkillTags icon={<FaPhp />} name="PHP" />
+                <SkillTags icon={<FaReact />} name="React" />
+                <SkillTags icon={<SiGnubash />} name="Bash" />
+                <SkillTags icon={<FaGitAlt />} name="Git" />
+                <SkillTags icon={<FaPython />} name="Python" />
+                <SkillTags icon={<SiCplusplus />} name="C++" />
+                <SkillTags icon={<FaNpm />} name="npm" />
+                <SkillTags icon={<FaNodeJs />} name="NodeJs" />
+                <SkillTags icon={<SiVite />} name="Vite" />
+                <SkillTags icon={<SiGnubash />} name="Bash" />
+                <SkillTags icon={<FaGitAlt />} name="Git" />
+                <SkillTags icon={<FaPython />} name="Python" />
+                <SkillTags icon={<SiCplusplus />} name="C++" />
+                <SkillTags icon={<FaNpm />} name="npm" />
+                <SkillTags icon={<FaNodeJs />} name="NodeJs" />
+                <SkillTags icon={<SiVite />} name="Vite" />
+               
             </span>
 
             <span className='flex items-center flex-wrap gap-4'>
                 <h1 className=' text-wood font-bold'>Designing</h1>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <SiAdobephotoshop />
-                    <p>Photoshop</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <SiAdobeillustrator/>
-                    <p>Illustrator</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <FaFigma />
-                    <p>Figma</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <SiCanva />
-                    <p>Canva</p>
-                </li>
+                <SkillTags icon={<SiAdobephotoshop />} name="Photoshop" />
+                <SkillTags icon={<SiAdobeillustrator />} name="Illustrator" />
+                <SkillTags icon={<FaFigma />} name="Figma" />
+                <SkillTags icon={<SiCanva />} name="Canva" />
+       
             </span>
 
             <span className='flex items-center flex-wrap gap-4'>
                 <h1 className=' text-wood font-bold'>Tools/Others</h1>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <SiMicrosoftoffice />
-                    <p>MS Office</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <SiObsstudio/>
-                    <p>OBS Studio</p>
-                </li>
-                <li className=' bg-neutral-800 rounded-md p-2 flex items-center gap-2'>
-                    <SiNotion/>
-                    <p>Notion</p>
-                </li>
+                <SkillTags icon={<SiMicrosoftoffice />} name="MS Office" />
+                <SkillTags icon={<SiObsstudio />} name="OBS Studio" />
+                <SkillTags icon={<SiNotion />} name="Notion" />
+                <SkillTags icon={<SiJirasoftware />} name="Jira" />
             </span>
 
         </ul>

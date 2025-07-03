@@ -1,8 +1,8 @@
 import React from 'react'
 import Card from './Card'
-import accion from '/src/img/accion.png'
-import hairlines from '/src/img/hairlines.png'
-import metro from '/src/img/metro.png'
+import accion from '../img/accion.png'
+import hairlines from '../img/hairlines.png'
+import metro from '../img/metro.png'
 
 function Projects() {
 
@@ -11,8 +11,11 @@ function Projects() {
   }
   return (
 
-    <div className='bg-neutral-900 p-4 lg:p-8 rounded-xl cursor-pointer w-auto'>
-        <h1 className='text-3xl pb-4 text-mustard font-bold'>/projects</h1>
+    <div className='bg-midnight p-4 lg:p-8 cursor-pointer w-5/6 md:w-3/4 rounded-lg border-2 border-neutral-700'>
+        <h1 className='text-3xl text-mustard font-bold'>Recent Projects</h1>
+
+        <div className='w-full h-px bg-neutral-700 my-4'></div>
+
         <div className='flex flex-col lg:flex-col xl:flex-row gap-5 justify-center'>
           <Card 
               img={accion} 
@@ -36,7 +39,7 @@ function Projects() {
               link="https://www.behance.net/gallery/150317913/Metro"/>
         </div>
         <span className='flex flex-col text-center items-center align-middle'>
-          <button onClick={Projects} className='bg-mustard px-3 py-1 rounded-md mt-6 font-bold text-black text-lg'>
+          <button onClick={Projects} className='text-mustard bg-mustard/10 hover:bg-mustard/40 rounded-md transition-all duration-300 px-4 py-2 mt-6 text-lg'>
             Show More
           </button>
         </span>

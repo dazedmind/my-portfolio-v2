@@ -1,62 +1,65 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa"; // Import FaTimes for closing
-import headerImg from "../img/agfx-chr.png"; // Replace with actual path
+import { useState, useRef, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+
+const navItems = [
+  { to: "/", label: "about", end: true },
+  { to: "/projects", label: "projects" },
+  { to: "/contact", label: "contact" },
+];
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [underlineStyle, setUnderlineStyle] = useState({});
+  const navRefs = useRef([]);
+  const location = useLocation();
 
-  // Function to toggle the menu
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    // Find the active nav item
+    const activeIndex = navItems.findIndex(item =>
+      item.end
+        ? location.pathname === item.to
+        : location.pathname.startsWith(item.to)
+    );
+    const activeRef = navRefs.current[activeIndex];
+    if (activeRef) {
+      setUnderlineStyle({
+        left: activeRef.offsetLeft,
+        width: activeRef.offsetWidth,
+        opacity: 1,
+      });
+    } else {
+      setUnderlineStyle({ opacity: 0 });
+    }
+  }, [location.pathname]);
 
   return (
-    <nav className="flex justify-between items-center p-8 sm:px-16 bg-neutral-900 text-white fixed top-0 w-full z-50">
-      {/* LOGO */}
-      <span className="flex items-center gap-3">
-        <img src={headerImg} alt="Logo" className="w-10" />
-        <h1 className="text-2xl md:text-3xl font-bold">AllenGFX</h1>
-      </span>
-
-      {/* Desktop NAVBAR */}
-      <ul className="hidden md:flex gap-11 text-xl items-center">
-        <li>
-          <a href="/" className="hover:text-mustard hover:underline underline-offset-8">
-            about
-          </a>
-        </li>
-        <li>
-          <Link to="/projects" className="hover:text-mustard hover:underline underline-offset-8">
-            projects
-          </Link>
-        </li>
-      </ul>
-
-      {/* MOBILE MENU ICON */}
-      <div className="md:hidden">
-        {isOpen ? (
-          <FaTimes className="text-2xl cursor-pointer" onClick={toggleMenu} />
-        ) : (
-          <FaBars className="text-2xl cursor-pointer" onClick={toggleMenu} />
-        )}
-      </div>
-
-      {/* MOBILE MENU */}
-      {isOpen && (
-        <ul className="absolute top-20 left-0 w-full bg-neutral-900 text-white flex flex-col items-center gap-6 py-6 text-xl md:hidden">
-          <li>
-            <a href="/" className="hover:text-mustard hover:underline underline-offset-8" onClick={toggleMenu}>
-              about
-            </a>
-          </li>
-          <li>
-            <Link to="/projects" className="hover:text-mustard hover:underline underline-offset-8" onClick={toggleMenu}>
-              projects
-            </Link>
-          </li>
+    <nav className="flex justify-center items-center align-middle rounded-full w-auto max-w-3xl p-8 sm:px-16 bg-neutral-900/30 backdrop-blur-md text-white fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
+      <div className="relative w-full">
+        <ul className="flex gap-11 text-xl items-center relative mb-1.5">
+          {navItems.map((item, idx) => (
+            <li key={item.to} ref={el => (navRefs.current[idx] = el)}>
+              <NavLink
+                to={item.to}
+                end={item.end}
+                className={({ isActive }) =>
+                  "px-2 py-1 transition-colors duration-300 ease-in-out " +
+                  (isActive ? "text-mustard" : "hover:text-mustard")
+                }
+              >
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
-      )}
+        {/* Animated Underline */}
+        <span
+          className="absolute bottom-0 h-1 bg-mustard rounded transition-all duration-300"
+          style={{
+            ...underlineStyle,
+            position: "absolute",
+            transition: "all 0.3s cubic-bezier(.4,0,.2,1)",
+          }}
+        />
+      </div>
     </nav>
   );
 };

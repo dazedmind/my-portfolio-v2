@@ -1,20 +1,23 @@
 import React from "react";
 
 import Card from "../components/Card";
-import scoreboard from '/src/img/scoreboard.png'
-import accion from '/src/img/accion.png'
-import hairlines from '/src/img/hairlines.png'
-import peerplanner from '/src/img/peerplanner.png'
-import agfxpos from '/src/img/pos.png'
-import metro from '/src/img/metro.png'
-import lookback from '/src/img/lookback24.png'
+import accion from '../img/accion.png'
+import hairlines from '../img/hairlines.png'
+import peerplanner from '../img/peerplanner.png'
+import agfxpos from '../img/pos.png'
+import metro from '../img/metro.png'
+import lookback from '../img/lookback24.png'
+import SplitText from "../components/reactbits/SplitText";
+import BlurText from "../components/reactbits/BlurText";
 
 function ProjectPage() {
     return (
         <>
         <section className="bg-gradient-to-b from-neutral-900 to-neutral-800 h-auto text-white">
             <div className="flex flex-col justify-around pt-40 px-10 gap-14">
-            <h1 className='text-4xl pb-4 text-mustard mx-2 lg:mx-24 font-bold'>/here's the list of my cool projects!</h1>
+                <div className="flex justify-center items-center">
+                    <BlurText text="Here's my cool projects!" duration={0.2} className="text-3xl md:text-7xl font-bold text-mustard" />
+                </div>
                 <div className="flex flex-wrap items-center align-middle justify-center gap-7">
                 {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7"> */}
                     <Card 

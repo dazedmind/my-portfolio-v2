@@ -7,9 +7,11 @@ function About() {
   const viewEducation = () => setshowResults(current => !current)
 
   return (
-    <div className='bg-neutral-900 p-8 w-auto rounded-xl z-30'>
-        <h1 className='text-3xl pb-4 text-mustard font-bold'>/background</h1>
-        <p className='text-lg sm:text-xl xl:text-xl'>I like to create and design web applications. I have passion in creating seamless design that appeals to the eyes of the viewers. Technology empowers me and in return, uses it to empower people.</p>
+    <div className='bg-midnight p-8 w-full rounded-lg z-30 border-2 border-neutral-700'>
+        <h1 className='text-3xl text-mustard font-bold'>Background</h1>
+        <div className='w-full h-px bg-neutral-700 my-4'></div>
+
+        <p className='text-lg sm:text-xl xl:text-xl'>I am a 4th Year Bachelor of Science in Information Technology student at <span className='text-mustard font-bold'>Pamantasan ng Lungsod ng Maynila (PLM)</span>. I love to create and design web applications. I have passion in creating seamless design that appeals to the eyes of the viewers.</p>
     </div>
   )
 }
