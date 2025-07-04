@@ -8,8 +8,8 @@ import TrueFocus from '../components/reactbits/TrueFocus';
 function ContactPage() {
   return (
     <>
-        <section className="bg-midnight h-screen text-white flex flex-col justify-center items-center gap-6 mb-20">
-            <div className='flex flex-col justify-center items-center pt-32 px-10 my-60 gap-10'>
+        <section className="bg-midnight min-h-screen text-white flex flex-col justify-center items-center gap-6 mb-20">
+            <div className='flex flex-col justify-center items-center pt-40 md:pt-32 px-10 my-15 gap-8 md:gap-10'>
                 <TrueFocus 
                 sentence="Connect with me!"
                 manualMode={false}

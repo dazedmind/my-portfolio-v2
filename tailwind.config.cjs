@@ -38,6 +38,9 @@ module.exports = {
       },
       margin: {
         '40r': '20rem',
+      },
+      zIndex: {
+        '100': '100',
       }
     },
   },

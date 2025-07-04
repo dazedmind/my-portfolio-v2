@@ -44,7 +44,7 @@ function AboutPage() {
                             className="text-4xl md:text-7xl font-bold text-mustard"
                         />
                         <p className="text-md sm:text-lg lg:text-2xl text-neutral-500">
-                        Software Developer and UI/UX Designer
+                        Full Stack Developer and UI/UX Designer
                         </p>
                     </div>
 
@@ -68,7 +68,7 @@ function AboutPage() {
             <section id="about" className="text-neutral-300 flex flex-col justify-start items-center w-auto mt-36 mb-10 gap-14">
                 <div className="flex flex-col md:flex-row justify-center items-start w-4/5 gap-16">
                     <CircularText
-                        text="ABOUT ME * ABOUT ME *"
+                        text="ABOUT ME * ABOUT ME * "
                         onHover="speedUp"
                         spinDuration={20}
                         className="custom-class"
@@ -129,7 +129,7 @@ function AboutPage() {
                     <span className="flex items-center gap-2">
                         <p className="text-3xl md:text-7xl font-bold text-white">Ready to</p>
                         <RotatingText
-                            texts={['connect?', 'collaborate?', 'create?']}
+                            texts={['connect?', 'create?', 'innovate?']}
                             className="text-3xl md:text-7xl font-bold bg-yale-blue/30 rounded-full px-4 py-2"
                             staggerFrom={"last"}
                             initial={{ y: "100%" }}

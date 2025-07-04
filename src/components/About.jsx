@@ -11,7 +11,7 @@ function About() {
         <h1 className='text-3xl text-mustard font-bold'>Background</h1>
         <div className='w-full h-px bg-neutral-700 my-4'></div>
 
-        <p className='text-lg sm:text-xl xl:text-xl'>I am a 4th Year Bachelor of Science in Information Technology student at <span className='text-mustard font-bold'>Pamantasan ng Lungsod ng Maynila (PLM)</span>. I love to create and design web applications. I have passion in creating seamless design that appeals to the eyes of the viewers.</p>
+        <p className='text-lg sm:text-xl xl:text-xl'>I am a 4th Year Bachelor of Science in Information Technology student at <span className='text-mustard font-bold'>Pamantasan ng Lungsod ng Maynila (PLM)</span>, with a strong passion for building and designing web applications. I specialize in crafting seamless, visually appealing user interfaces that not only look good but also enhance the overall user experience.</p>
     </div>
   )
 }
