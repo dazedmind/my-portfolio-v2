@@ -3,12 +3,10 @@ import Card from './Card'
 import accion from '../img/accion.png'
 import hairlines from '../img/hairlines.png'
 import metro from '../img/metro.png'
+import { Link } from 'react-router-dom'
 
 function Projects() {
 
-  function gotoLink() {
-    window.open("https://www.behance.net/johnallenvalena", "_blank")
-  }
   return (
 
     <div className='bg-midnight p-4 lg:p-8 cursor-pointer w-5/6 md:w-3/4 rounded-lg'>
@@ -39,9 +37,11 @@ function Projects() {
               link="https://www.behance.net/gallery/150317913/Metro"/>
         </div>
         <span className='flex flex-col text-center items-center align-middle'>
-          <button onClick={() => window.location.href = "./projects"} className='text-mustard bg-mustard/10 hover:bg-mustard/40 rounded-full transition-all duration-300 px-4 py-2 mt-6 text-lg'>
-            Show More
-          </button>
+          <Link to="/projects">
+            <button className='text-mustard bg-mustard/10 hover:bg-mustard/40 rounded-full transition-all duration-300 px-4 py-2 mt-6 text-lg'>
+              Show More
+            </button>
+          </Link>
         </span>
     </div>
   )

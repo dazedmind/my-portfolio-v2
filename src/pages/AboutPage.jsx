@@ -14,7 +14,8 @@ import CircularText from "../components/reactbits/CircularText";
 import Education from "../components/Education";
 import ExpCard from "../components/ExpCard";
 import RotatingText from "../components/reactbits/RotatingText";
-import { ChevronRight, MoveRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const handleAnimationComplete = () => {
     console.log('Animation completed!');
@@ -140,10 +141,11 @@ function AboutPage() {
                             rotationInterval={3000}
                         />
                     </span>
-
-                    <button onClick={() => window.location.href = "/contact"} className="hover:underline transition-all duration-300 ease-linear text-lg underline-offset-8 flex items-center gap-2">
-                        Let's Go <ChevronRight className="w-4 h-4" />
-                    </button>
+                    <Link to="/contact">
+                        <button className="hover:underline transition-all duration-300 ease-linear text-lg underline-offset-8 flex items-center gap-2">
+                            Let's Go <ChevronRight className="w-4 h-4" />
+                        </button>
+                    </Link>
                 </div>
            
                 
