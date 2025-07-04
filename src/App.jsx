@@ -34,7 +34,7 @@ function App() {
 
         <footer className="bg-gradient-to-t from-neutral-900 to-neutral-800">
             <div className="flex flex-col px-4 sm:px-5 lg:px-72 py-16 gap-4">
-                <h1 className="text-4xl md:text-5xl text-white text-center">
+                <h1 className="text-3xl md:text-5xl text-white text-center">
                 Thank you for <span className="font-bold">visiting</span>!
                 </h1>
                 <span className="flex justify-between text-neutral-400 mt-8">
