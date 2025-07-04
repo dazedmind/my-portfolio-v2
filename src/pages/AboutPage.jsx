@@ -25,7 +25,7 @@ const handleAnimationComplete = () => {
 
   const items = [
     {
-      image: avatar,
+      image: avatar2,
       title: "John Allen Valeña",
       subtitle: "Full Stack Developer and UI/UX Designer",
       handle: "@gtfo.allen",
