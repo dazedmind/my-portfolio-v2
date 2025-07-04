@@ -52,7 +52,7 @@ const NavBar = () => {
         </ul>
         {/* Animated Underline */}
         <span
-          className="absolute bottom-0 h-1 bg-mustard rounded transition-all duration-300"
+          className="absolute bottom-0 h-0.5 bg-mustard rounded transition-all duration-300"
           style={{
             ...underlineStyle,
             position: "absolute",

@@ -14,7 +14,7 @@ function ProjectPage() {
     return (
         <>
         <section className="bg-gradient-to-b from-neutral-900 to-neutral-800 h-auto text-white">
-            <div className="flex flex-col justify-around pt-40 px-10 gap-14">
+            <div className="flex flex-col justify-around pt-32 px-10 gap-14">
                 <div className="flex justify-center items-center">
                     <BlurText text="Here's my cool projects!" duration={0.2} className="text-3xl md:text-7xl font-bold text-mustard" />
                 </div>

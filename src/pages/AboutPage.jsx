@@ -12,6 +12,9 @@ import Certifications from "../components/Certifications";
 import ScrollVelocity from "../components/reactbits/ScrollVelocity";
 import CircularText from "../components/reactbits/CircularText";
 import Education from "../components/Education";
+import ExpCard from "../components/ExpCard";
+import RotatingText from "../components/reactbits/RotatingText";
+import { ChevronRight, MoveRight } from "lucide-react";
 
 const handleAnimationComplete = () => {
     console.log('Animation completed!');
@@ -75,11 +78,15 @@ function AboutPage() {
                     </div>
                 </div>
         
+                {/* Skills */}
                 <Skills />
                 
+                {/* Projects */}
                 <Projects />
+
+                {/* Certificates */}
                 <div className="flex flex-col md:flex-row justify-center items-center">
-                    <h1 className="text-4xl md:text-5xl font-bold text-mustard">Certifications</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-mustard">Certificates</h1>
                     <Certifications />                
                 </div>
                 
@@ -88,6 +95,57 @@ function AboutPage() {
                         texts={['Software Developer', 'UI/UX Designer']}
                     />
                 </div> */}
+
+                {/* Student Leadership Experience */}
+                <div className="flex flex-col gap-2 items-center justify-center w-4/5">
+                    <h1 className="text-4xl  font-bold text-mustard mb-6 text-center">Student Leadership Experience</h1>
+                    <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+                        <ExpCard
+                            organization="Microsoft Student Community - PLM"
+                            position="Creative Designer"
+                            duration="2024 - Present"
+                            description="Responsible for creating and designing the visual identity of the community."
+                        />
+                        <ExpCard
+                            organization="AWS Clouds Club - Haribon"
+                            position="Layout Editor and UI/UX Designer"
+                            duration="2024 - Present"
+                            description="Participated in workshops, webinars, and hands-on labs to stay updated with the latest advancements in cloud 
+    computing and AWS offerings."
+                        />
+                        <ExpCard
+                            organization="PLM Google Developer Student’s Club"
+                            position="Noogler"
+                            duration="2024 - Present"
+                            description="Collaborated with other co-developer students about learning about developing websites and programs."
+                        />
+                    </div>
+                </div>
+
+
+                {/* Connect with me */}
+                <div className="my-20 flex flex-col gap-8 items-center justify-center">
+                    <span className="flex items-center gap-2">
+                        <p className="text-3xl md:text-7xl font-bold text-white">Ready to</p>
+                        <RotatingText
+                            texts={['connect?', 'collaborate?', 'create?']}
+                            className="text-3xl md:text-7xl font-bold bg-yale-blue/30 rounded-full px-4 py-2"
+                            staggerFrom={"last"}
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            exit={{ y: "-120%" }}
+                            staggerDuration={0.025}
+                            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                            rotationInterval={3000}
+                        />
+                    </span>
+
+                    <button onClick={() => window.location.href = "/contact"} className="hover:underline transition-all duration-300 ease-linear text-lg underline-offset-8 flex items-center gap-2">
+                        Let's Go <ChevronRight className="w-4 h-4" />
+                    </button>
+                </div>
+           
                 
             </section>
            

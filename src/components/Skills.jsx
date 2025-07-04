@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaHtml5, FaJs, FaReact, FaGitAlt, FaPython, FaFigma, FaNpm, FaNodeJs, FaPhp } from 'react-icons/fa'
-import { SiTailwindcss, SiGnubash, SiAdobephotoshop, SiAdobeillustrator, SiCplusplus, SiMicrosoftoffice, SiObsstudio, SiVite, SiCanva, SiNotion, SiJirasoftware} from "react-icons/si";
+import { SiTailwindcss, SiGnubash, SiAdobephotoshop, SiAdobeillustrator, SiCplusplus, SiMicrosoftoffice, SiObsstudio, SiVite, SiCanva, SiNotion, SiJirasoftware, SiNextdotjs, SiPrisma} from "react-icons/si";
 import SkillTags from './SkillTags'
 
 function Skills () {
@@ -12,7 +12,7 @@ function Skills () {
         <ul className='flex flex-col text-white text-md md:text-lg gap-8'>
             <span className='flex items-center flex-wrap gap-2'>
                 <h1 className=' text-wood font-bold'>Technology</h1>
-                <SkillTags icon={<FaHtml5 />} name="HTML" />
+                <SkillTags icon={<FaHtml5 />} name="HTML5" />
                 <SkillTags icon={<SiTailwindcss />} name="CSS/Tailwind CSS" />
                 <SkillTags icon={<FaJs />} name="JavaScript" />
                 <SkillTags icon={<FaPhp />} name="PHP" />
@@ -24,13 +24,8 @@ function Skills () {
                 <SkillTags icon={<FaNpm />} name="npm" />
                 <SkillTags icon={<FaNodeJs />} name="NodeJs" />
                 <SkillTags icon={<SiVite />} name="Vite" />
-                <SkillTags icon={<SiGnubash />} name="Bash" />
-                <SkillTags icon={<FaGitAlt />} name="Git" />
-                <SkillTags icon={<FaPython />} name="Python" />
-                <SkillTags icon={<SiCplusplus />} name="C++" />
-                <SkillTags icon={<FaNpm />} name="npm" />
-                <SkillTags icon={<FaNodeJs />} name="NodeJs" />
-                <SkillTags icon={<SiVite />} name="Vite" />
+                <SkillTags icon={<SiNextdotjs />} name="Next.js" />
+                <SkillTags icon={<SiPrisma />} name="Prisma" />
                
             </span>
 

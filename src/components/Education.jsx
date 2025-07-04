@@ -4,8 +4,8 @@ const Education = () => {
 
     return (
         <div className='relative'>
-            <div className='ml-8 mt-5 flex flex-col gap-10'>
-                <div className='h-44 md:h-32 w-1 bg-neutral-800 absolute left-10 top-20 md:top-14 z-10'></div>
+            <div className='ml-8 mt-5 flex flex-col gap-10 relative'>
+                <div className='h-44 md:h-32 w-1 bg-neutral-800 absolute left-2 top-14 md:top-8 z-10'></div>
                 <div className='flex justify-start  items-center gap-6'>
                     <div className="w-5 h-5 z-50 bg-mustard rounded-full flex-shrink-0 border-4 border-neutral-700"></div>
                     <span>

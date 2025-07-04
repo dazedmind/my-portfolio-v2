@@ -7,11 +7,11 @@ import metro from '../img/metro.png'
 function Projects() {
 
   function gotoLink() {
-    window.location.href = "https://www.behance.net/johnallenvalena"
+    window.open("https://www.behance.net/johnallenvalena", "_blank")
   }
   return (
 
-    <div className='bg-midnight p-4 lg:p-8 cursor-pointer w-5/6 md:w-3/4 rounded-lg border-2 border-neutral-700'>
+    <div className='bg-midnight p-4 lg:p-8 cursor-pointer w-5/6 md:w-3/4 rounded-lg'>
         <h1 className='text-3xl text-mustard font-bold'>Recent Projects</h1>
 
         <div className='w-full h-px bg-neutral-700 my-4'></div>
@@ -39,7 +39,7 @@ function Projects() {
               link="https://www.behance.net/gallery/150317913/Metro"/>
         </div>
         <span className='flex flex-col text-center items-center align-middle'>
-          <button onClick={Projects} className='text-mustard bg-mustard/10 hover:bg-mustard/40 rounded-md transition-all duration-300 px-4 py-2 mt-6 text-lg'>
+          <button onClick={() => window.location.href = "./projects"} className='text-mustard bg-mustard/10 hover:bg-mustard/40 rounded-full transition-all duration-300 px-4 py-2 mt-6 text-lg'>
             Show More
           </button>
         </span>
