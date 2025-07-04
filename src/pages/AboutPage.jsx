@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import avatar from "../img/profile-av.jpg";
+import avatar2 from "../img/profile-portrait.jpg";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
@@ -16,10 +17,23 @@ import ExpCard from "../components/ExpCard";
 import RotatingText from "../components/reactbits/RotatingText";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import ChromaGrid from "../components/reactbits/ChromaGrid";
 
 const handleAnimationComplete = () => {
     console.log('Animation completed!');
   };
+
+  const items = [
+    {
+      image: avatar,
+      title: "John Allen Valeña",
+      subtitle: "Full Stack Developer and UI/UX Designer",
+      handle: "@gtfo.allen",
+      borderColor: "#3B82F6",
+      gradient: "linear-gradient(145deg, #3B82F6, #000)",
+      url: "https://github.com/dazedmind"
+    },
+  ];
 
 function AboutPage() {
     return (
@@ -66,30 +80,78 @@ function AboutPage() {
             </section>
 
             <section id="about" className="text-neutral-300 flex flex-col justify-start items-center w-auto mt-36 mb-10 gap-14">
-                <div className="flex flex-col md:flex-row justify-center items-start w-4/5 gap-16">
-                    <CircularText
-                        text="ABOUT ME * ABOUT ME * "
-                        onHover="speedUp"
-                        spinDuration={20}
-                        className="custom-class"
-                    />
+                <div className="flex flex-col md:flex-row justify-center items-start w-4/5 gap-8">
+         
+                    <div className="flex flex-col justify-center items-center">
+                        {/* <img src={avatar} alt="av" className="rounded-md w-80 z-10" /> */}
+                        <ChromaGrid 
+                            items={items}
+                            radius={300}
+                            damping={0.45}
+                            fadeOut={0.6}
+                            ease="power3.out"
+                            className="backdrop-opacity-0"
+                        />
+                    </div>
                     <div className="flex flex-col gap-4 w-full">
                         <About />
                         <Education />   
                     </div>
                 </div>
         
+                <AnimatedContent
+                    distance={60}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1.2}
+                    ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+                    initialOpacity={0}
+                    animateOpacity
+                    scale={0.95}
+                    threshold={0.2}
+                    delay={0.1}
+                    className="w-full flex justify-center items-center"
+                >
                 {/* Skills */}
-                <Skills />
-                
+                    <Skills />
+                </AnimatedContent>
+
                 {/* Projects */}
-                <Projects />
+                 
+                <AnimatedContent
+                    distance={60}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1.2}
+                    ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+                    initialOpacity={0}
+                    animateOpacity
+                    scale={0.95}
+                    threshold={0.2}
+                    delay={0.1}
+                    className="w-full flex justify-center items-center"
+                >
+                    <Projects />
+                </AnimatedContent>
 
                 {/* Certificates */}
-                <div className="flex flex-col md:flex-row justify-center items-center">
+                     
+                <AnimatedContent
+                    distance={60}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1.2}
+                    ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+                    initialOpacity={0}
+                    animateOpacity
+                    scale={0.95}
+                    threshold={0.2}
+                    delay={0.1}
+                    className="flex flex-col md:flex-row justify-center items-center align-middle"
+                >
                     <h1 className="text-4xl md:text-5xl font-bold text-mustard">Certificates</h1>
                     <Certifications />                
-                </div>
+                </AnimatedContent>
                 
                 {/* <div className="w-full">
                     <ScrollVelocity 
@@ -99,7 +161,21 @@ function AboutPage() {
 
                 {/* Student Leadership Experience */}
                 <div className="flex flex-col gap-2 items-center justify-center w-4/5">
-                    <h1 className="text-4xl  font-bold text-mustard mb-6 text-center">Student Leadership Experience</h1>
+                 
+                <AnimatedContent
+                    distance={60}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1.2}
+                    ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+                    initialOpacity={0}
+                    animateOpacity
+                    scale={0.95}
+                    threshold={0.2}
+                    delay={0.1}
+                    className="w-full flex-col justify-center items-center"
+                >
+                    <h1 className="text-4xl  font-bold text-mustard mb-6 text-center">Work and Leadership Experience</h1>
                     <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                         <ExpCard
                             organization="Microsoft Student Community - PLM"
@@ -112,15 +188,16 @@ function AboutPage() {
                             position="Layout Editor and UI/UX Designer"
                             duration="2024 - Present"
                             description="Participated in workshops, webinars, and hands-on labs to stay updated with the latest advancements in cloud 
-    computing and AWS offerings."
+                            computing and AWS offerings."
                         />
                         <ExpCard
                             organization="PLM Google Developer Student’s Club"
                             position="Noogler"
-                            duration="2024 - Present"
+                            duration="2022 - Present"
                             description="Collaborated with other co-developer students about learning about developing websites and programs."
                         />
                     </div>
+                </AnimatedContent>
                 </div>
 
 

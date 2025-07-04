@@ -11,8 +11,10 @@ module.exports = {
         'chakra': "Chakra Petch"
       },
       colors: {
-        'mustard': '#d3a04d',
-        'wood': '#a43c23',
+        // 'mustard': '#d3a04d',
+        'mustard': '#5BC0BE',
+        'wood': '#1D7874',
+        // 'wood': '#a43c23',
         'yale-blue': '#134074',
         'berk-blue': '#13315C',
         'oxford-blue': '#0B2545',

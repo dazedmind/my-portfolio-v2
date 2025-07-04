@@ -14,7 +14,7 @@ function ContactPage() {
                 sentence="Connect with me!"
                 manualMode={false}
                 blurAmount={5}
-                borderColor="orange"
+                borderColor="cyan"
                 animationDuration={0.4}
                 pauseBetweenAnimations={1}
                 />

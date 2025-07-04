@@ -17,6 +17,7 @@ const AnimatedContent = ({
   threshold = 0.1,
   delay = 0,
   onComplete,
+  className,
 }) => {
   const ref = useRef(null);
 
@@ -68,7 +69,7 @@ const AnimatedContent = ({
     onComplete,
   ]);
 
-  return <div ref={ref}>{children}</div>;
+  return <div ref={ref} className={className}>{children}</div>;
 };
 
 export default AnimatedContent;
