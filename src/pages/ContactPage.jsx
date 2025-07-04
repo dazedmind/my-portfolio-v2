@@ -9,7 +9,7 @@ function ContactPage() {
   return (
     <>
         <section className="bg-midnight h-screen text-white flex flex-col justify-center items-center gap-6 mb-20">
-            <div className='flex flex-col justify-center items-center pt-32 px-10 mt-40 gap-10'>
+            <div className='flex flex-col justify-center items-center pt-32 px-10 my-40 gap-10'>
                 <TrueFocus 
                 sentence="Connect with me!"
                 manualMode={false}
@@ -20,21 +20,21 @@ function ContactPage() {
                 />
 
                 <Contact />
-            </div>
 
-            <div className='flex flex-col p-4 mb-20'>
-                <span className='flex gap-11 mx-auto'>
-                        <a href="https://github.com/dazedmind" target="_blank">
-                            <FaGithub className='text-4xl text-white hover:text-mustard transition-all duration-300'/>
-                        </a>
-                        <a href="https://www.linkedin.com/in/johnallenvalena/" target="_blank">
-                            <FaLinkedin className='text-4xl text-white hover:text-mustard transition-all duration-300'/>
-                        </a>
+                <div className='flex flex-col p-4'>
+                    <span className='flex gap-11 mx-auto'>
+                            <a href="https://github.com/dazedmind" target="_blank">
+                                <FaGithub className='text-4xl text-white hover:text-mustard transition-all duration-300'/>
+                            </a>
+                            <a href="https://www.linkedin.com/in/johnallenvalena/" target="_blank">
+                                <FaLinkedin className='text-4xl text-white hover:text-mustard transition-all duration-300'/>
+                            </a>
 
-                        <a href="https://www.behance.net/johnallenvalena" target="_blank">
-                        <FaBehance className='text-4xl text-white hover:text-mustard transition-all duration-300'/>
-                        </a>
-                </span>
+                            <a href="https://www.behance.net/johnallenvalena" target="_blank">
+                            <FaBehance className='text-4xl text-white hover:text-mustard transition-all duration-300'/>
+                            </a>
+                    </span>
+                </div>
             </div>
         </section>
     </>
