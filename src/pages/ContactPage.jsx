@@ -9,7 +9,7 @@ function ContactPage() {
   return (
     <>
         <section className="bg-midnight h-screen text-white flex flex-col justify-center items-center gap-6 mb-20">
-            <div className='flex flex-col justify-center items-center pt-32 px-10 my-40 gap-10'>
+            <div className='flex flex-col justify-center items-center pt-32 px-10 my-60 gap-10'>
                 <TrueFocus 
                 sentence="Connect with me!"
                 manualMode={false}
