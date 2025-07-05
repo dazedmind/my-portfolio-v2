@@ -4,12 +4,18 @@ import dictCert from '../img/DICT-Certificate.png'
 import awsCert from '../img/aws-certificate.png'
 import achieverCert from '../img/achiever-certificate.png'
 import cyberCert from '../img/cybersecurity-certificate.png'
+import reconCert from '../img/recon-certificate.png'
+import unixCert from '../img/unix-certificate.png'
+import udemyCert from '../img/udemy-certificate.jpg'
 
 const images = [
-    { id: 1, img: cyberCert },
-    { id: 2, img: dictCert },
-    { id: 3, img: awsCert },
-    { id: 4, img: achieverCert }
+    { id: 1, img: achieverCert },
+    { id: 2, img: cyberCert },
+    { id: 3, img: unixCert },
+    { id: 4, img: dictCert },
+    { id: 5, img: udemyCert },
+    { id: 6, img: awsCert },
+    { id: 7, img: reconCert }
   ];
 
 function useResponsiveCardDimensions() {

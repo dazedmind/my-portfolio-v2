@@ -30,7 +30,7 @@ function ProjectPage() {
                         duration={1}
                         className="count-up-text text-6xl font-bold"
                         />
-                        <p>Total Projects</p>
+                        <p className="text-lg font-mono">Total Projects</p>
                 </div>
                 <div className="flex flex-wrap items-center align-middle justify-center gap-7">
                 {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7"> */}

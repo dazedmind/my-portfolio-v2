@@ -15,7 +15,7 @@ import CircularText from "../components/reactbits/CircularText";
 import Education from "../components/Education";
 import ExpCard from "../components/ExpCard";
 import RotatingText from "../components/reactbits/RotatingText";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ChromaGrid from "../components/reactbits/ChromaGrid";
 
@@ -39,16 +39,9 @@ function AboutPage() {
     return (
         <>
             <section className="bg-midnight h-screen text-white">
-                <div className="flex flex-col-reverse lg:flex-row justify-around items-center pt-64 2xl:pt-64  px-10 gap-14">
-                    <div className="z-10">
-            
-                        <DecryptedText
-                            text="My name is"
-                            animateOn="view"
-                            revealDirection="center"
-                            delay={200}
-                            className="text-2xl md:text-4xl"
-                        />
+                <div className="flex flex-col-reverse lg:flex-row justify-around items-center pt-56 2xl:pt-64 px-6 gap-14">
+                    <div className="z-10 flex flex-col md:justify-start md:items-start justify-center items-center">
+        
                         <BlurText
                             text="John Allen Valeña"
                             delay={200}
@@ -60,6 +53,23 @@ function AboutPage() {
                         <p className="text-md sm:text-lg lg:text-2xl text-neutral-500">
                         Full Stack Developer and UI/UX Designer
                         </p>
+                        
+                        <AnimatedContent
+                            distance={60}
+                            direction="vertical"
+                            reverse={false}
+                            duration={1.1}
+                            ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+                        >   
+                            <Link to="/projects">  
+                                <button className="flex items-center gap-1 text-wood px-4 py-3 rounded-full mt-4 hover:bg-mustard/10 hover:text-mustard transition-all duration-200 ease-linear">
+                                    View Projects 
+                                    <ArrowRight className="w-4 h-4" />
+                                </button>
+                            </Link>
+                            
+                        </AnimatedContent>
+                        
                     </div>
 
                     <img src={avatar} alt="av" className="rounded-full w-44 lg:w-56 z-10" />
@@ -176,14 +186,16 @@ function AboutPage() {
                     className="w-full flex-col justify-center items-center"
                 >
                     <h1 className="text-4xl  font-bold text-mustard mb-6 text-center">Work and Leadership Experience</h1>
-                    <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+                    <div className=" flex flex-col justify-center items-center md:flex-row gap-4">
                         <ExpCard
+                            number="01"
                             organization="Microsoft Student Community - PLM"
                             position="Creative Designer"
                             duration="2024 - Present"
                             description="Responsible for creating and designing the visual identity of the community."
                         />
                         <ExpCard
+                            number="02"
                             organization="AWS Clouds Club - Haribon"
                             position="Layout Editor and UI/UX Designer"
                             duration="2024 - Present"
@@ -191,11 +203,12 @@ function AboutPage() {
                             computing and AWS offerings."
                         />
                         <ExpCard
+                            number="03"
                             organization="PLM Google Developer Student’s Club"
                             position="Noogler"
                             duration="2022 - Present"
                             description="Collaborated with other co-developer students about learning about developing websites and programs."
-                        />
+                        />                    
                     </div>
                 </AnimatedContent>
                 </div>
@@ -220,7 +233,7 @@ function AboutPage() {
                     </span>
                     <Link to="/contact">
                         <button className="hover:underline transition-all duration-300 ease-linear text-lg underline-offset-8 flex items-center gap-2">
-                            Let's Go <ChevronRight className="w-4 h-4" />
+                            Let's Do It <ChevronRight className="w-4 h-4" />
                         </button>
                     </Link>
                 </div>

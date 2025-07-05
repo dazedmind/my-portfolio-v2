@@ -1,54 +1,132 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaHtml5, FaJs, FaReact, FaGitAlt, FaPython, FaFigma, FaNpm, FaNodeJs, FaPhp } from 'react-icons/fa'
 import { SiTailwindcss, SiGnubash, SiAdobephotoshop, SiAdobeillustrator, SiCplusplus, SiMicrosoftoffice, SiObsstudio, SiVite, SiCanva, SiNotion, SiJirasoftware, SiNextdotjs, SiPrisma} from "react-icons/si";
-import SkillTags from './SkillTags'
+import SkillTags from './SkillTags';
 
-function Skills () {
+function Skills() {
+    const [activeFilter, setActiveFilter] = useState('');
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    const skills = [
+        { icon: <FaHtml5 />, name: "HTML5", categories: ['Frontend'] },
+        { icon: <SiTailwindcss />, name: "CSS/Tailwind CSS", categories: ['Frontend'] },
+        { icon: <FaJs />, name: "JavaScript", categories: ['Frontend', 'Backend'] },
+        { icon: <FaPhp />, name: "PHP", categories: ['Backend'] },
+        { icon: <FaReact />, name: "React", categories: ['Frontend'] },
+        { icon: <SiGnubash />, name: "Bash", categories: ['⚙️'] },
+        { icon: <FaGitAlt />, name: "Git", categories: ['⚙️'] },
+        { icon: <FaPython />, name: "Python", categories: ['Backend'] },
+        { icon: <SiCplusplus />, name: "C++", categories: ['Backend'] },
+        { icon: <FaNpm />, name: "npm", categories: ['⚙️'] },
+        { icon: <FaNodeJs />, name: "NodeJs", categories: ['Backend'] },
+        { icon: <SiVite />, name: "Vite", categories: ['Frontend'] },
+        { icon: <SiNextdotjs />, name: "Next.js", categories: ['Frontend'] },
+        { icon: <SiPrisma />, name: "Prisma", categories: ['Backend'] },
+        { icon: <SiAdobephotoshop />, name: "Photoshop", categories: ['Design'] },
+        { icon: <SiAdobeillustrator />, name: "Illustrator", categories: ['Design'] },
+        { icon: <FaFigma />, name: "Figma", categories: ['Design'] },
+        { icon: <SiCanva />, name: "Canva", categories: ['Design'] },
+        { icon: <SiMicrosoftoffice />, name: "MS Office", categories: ['⚙️'] },
+        { icon: <SiObsstudio />, name: "OBS Studio", categories: ['⚙️'] },
+        { icon: <SiNotion />, name: "Notion", categories: ['⚙️'] },
+        { icon: <SiJirasoftware />, name: "Jira", categories: ['⚙️'] },
+    ];
+
+    const filters = ['All', 'Frontend', 'Backend', '⚙️'];
+
+    const handleFilterChange = (filter) => {
+        if (filter === activeFilter) return;
+        
+        setIsAnimating(true);
+        setTimeout(() => {
+            setActiveFilter(filter);
+            setIsAnimating(false);
+        }, 10);
+    };
+
+    const isSkillHighlighted = (skill) => {
+        return skill.categories.includes(activeFilter);
+    };
+
+    const getArrangedSkills = () => {
+        if (activeFilter === 'All') return skills;
+        
+        const highlighted = skills.filter(skill => skill.categories.includes(activeFilter));
+        const others = skills.filter(skill => !skill.categories.includes(activeFilter));
+        
+        return [...highlighted, ...others];
+    };
+
     return (
-    <div className='bg-midnight p-8 w-5/6 md:w-3/4 rounded-lg border-2 border-neutral-700'>
-        <h1 className='text-3xl text-mustard font-bold'>Skills</h1>
-        <div className='w-full h-px bg-neutral-700 my-4'></div>
+        <div className='bg-midnight p-6 w-5/6 md:w-3/4 rounded-lg border-2 border-neutral-800'>
+            <style jsx>{`
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px) scale(0.95);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0) scale(1);
+                    }
+                }
+                
+                @keyframes pulse {
+                    0%, 100% {
+                        transform: scale(1);
+                    }
+                    50% {
+                        transform: scale(1.05);
+                    }
+                }
+                
+                .skills-container {
+                    opacity: 1;
+                    transition: opacity 0.3s ease-out;
+                }
+                
+                .skills-container.animating {
+                    opacity: 0.7;
+                }
+            `}</style>
+            
+            <div className='flex flex-col md:flex-row gap-4 justify-between items-center align-middle'>
+                <h1 className='text-3xl text-mustard font-bold'>Skills</h1>
 
-        <ul className='flex flex-col text-white text-md md:text-lg gap-8'>
-            <span className='flex items-center flex-wrap gap-2'>
-                <h1 className=' text-wood font-bold'>Technology</h1>
-                <SkillTags icon={<FaHtml5 />} name="HTML5" />
-                <SkillTags icon={<SiTailwindcss />} name="CSS/Tailwind CSS" />
-                <SkillTags icon={<FaJs />} name="JavaScript" />
-                <SkillTags icon={<FaPhp />} name="PHP" />
-                <SkillTags icon={<FaReact />} name="React" />
-                <SkillTags icon={<SiGnubash />} name="Bash" />
-                <SkillTags icon={<FaGitAlt />} name="Git" />
-                <SkillTags icon={<FaPython />} name="Python" />
-                <SkillTags icon={<SiCplusplus />} name="C++" />
-                <SkillTags icon={<FaNpm />} name="npm" />
-                <SkillTags icon={<FaNodeJs />} name="NodeJs" />
-                <SkillTags icon={<SiVite />} name="Vite" />
-                <SkillTags icon={<SiNextdotjs />} name="Next.js" />
-                <SkillTags icon={<SiPrisma />} name="Prisma" />
-               
-            </span>
+                {/* Filter Buttons */}
+                <div className='flex flex-nowrap gap-2 items-center justify-center'>
+                    {filters.map((filter) => (
+                        <button
+                            key={filter}
+                            onClick={() => handleFilterChange(filter)}
+                            className={`px-3 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${
+                                activeFilter === filter
+                                    ? 'bg-mustard text-midnight shadow-lg scale-105'
+                                    : 'bg-neutral-700 text-neutral-300 hover:bg-neutral-600'
+                            }`}
+                        >
+                            {filter}
+                        </button>
+                    ))}
+                </div>
+            </div>
+            <div className='w-full h-px bg-neutral-800 my-4'></div>
+            
 
-            <span className='flex items-center flex-wrap gap-2'>
-                <h1 className=' text-wood font-bold'>Designing</h1>
-                <SkillTags icon={<SiAdobephotoshop />} name="Photoshop" />
-                <SkillTags icon={<SiAdobeillustrator />} name="Illustrator" />
-                <SkillTags icon={<FaFigma />} name="Figma" />
-                <SkillTags icon={<SiCanva />} name="Canva" />
-       
-            </span>
-
-            <span className='flex items-center flex-wrap gap-2'>
-                <h1 className=' text-wood font-bold'>Tools/Others</h1>
-                <SkillTags icon={<SiMicrosoftoffice />} name="MS Office" />
-                <SkillTags icon={<SiObsstudio />} name="OBS Studio" />
-                <SkillTags icon={<SiNotion />} name="Notion" />
-                <SkillTags icon={<SiJirasoftware />} name="Jira" />
-            </span>
-
-        </ul>
-    </div>
-    )
+            {/* Skills Grid */}
+            <div className={`flex flex-wrap gap-3 skills-container ${isAnimating ? 'animating' : ''}`}>
+                {getArrangedSkills().map((skill, index) => (
+                    <SkillTags
+                        key={`${skill.name}-${activeFilter}`}
+                        icon={skill.icon}
+                        name={skill.name}
+                        isHighlighted={isSkillHighlighted(skill)}
+                        delay={index * 30}
+                    />
+                ))}
+            </div>
+        </div>
+    );
 }
 
-export default Skills
+export default Skills;

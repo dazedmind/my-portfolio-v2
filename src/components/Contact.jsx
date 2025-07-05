@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaBehance, FaDiscord, FaFacebook } fro
 
 function Contact() {
   return (
-    <div className='bg-midnight p-4 rounded-lg border-2 border-neutral-700 justify-center w-auto'>
+    <div className='bg-midnight p-4 rounded-lg border-2 border-neutral-800 justify-center w-auto'>
         <div className='flex flex-col justify-center text-center items-center'>
           <div className='flex flex-col text-center'>
             <h1 className='text-lg text-white p-3'>Got Ideas? Feedback? Collaboration?</h1>

@@ -13,7 +13,7 @@ const tagColors = {
 
 const Card = (props) => {
   return (
-    <div className='group bg-midnight shadow-xl hover:shadow-2xl rounded-2xl overflow-hidden w-auto xl:w-96 h-auto transform hover:-translate-y-2 transition-all duration-300 ease-out border border-neutral-700'>
+    <div className='group bg-midnight shadow-xl hover:shadow-2xl rounded-md overflow-hidden w-auto xl:w-96 h-auto transform hover:-translate-y-2 transition-all duration-300 ease-out border border-neutral-700'>
       
       {/* Image Section with Overlay */}
       <div className='relative overflow-hidden'>

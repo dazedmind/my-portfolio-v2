@@ -1,14 +1,21 @@
 import React from 'react'
 
-function SkillTags(props) {
-  return (
-    <div>
-        <li className=' bg-midnight border-2 border-neutral-800 hover:bg-yale-blue/60 hover:border-yale-blue/80 transition-all duration-300 ease-linear cursor-pointer rounded-full p-2 px-3 text-sm flex items-center gap-2'>
-            <p>{props.icon}</p>
-            <p>{props.name}</p>
-        </li>
-    </div>
-  )
-}
+const SkillTags = ({ icon, name, isHighlighted, delay = 0 }) => (
+  <div 
+    className={`flex items-center gap-2 px-3 py-2 rounded-full border transition-all duration-500 ease-out transform ${
+      isHighlighted 
+        ? 'border-mustard bg-mustard/20 shadow-mustard/50 text-mustard' 
+        : 'border-neutral-800 bg-midnight text-neutral-300 scale-100'
+    }`}
+    style={{ 
+      transitionDelay: `${delay}ms`,
+      animation: `fadeInUp 0.6s ease-out ${delay}ms both`
+    }}
+  >
+    <span className="text-lg">{icon}</span>
+    <span className="text-sm font-medium">{name}</span>
+  </div>
+);
+
 
 export default SkillTags

@@ -5,12 +5,13 @@ import hairlines from '../img/hairlines.png'
 import metro from '../img/metro.png'
 import revault from '../img/revault.png'
 import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 
 function Projects() {
 
   return (
 
-    <div className='bg-midnight p-4 lg:p-8 cursor-pointer w-5/6 md:w-3/4 rounded-lg'>
+    <div className='bg-midnight cursor-pointer w-5/6 md:w-3/4 rounded-lg'>
         <h1 className='text-3xl text-mustard font-bold'>Recent Projects</h1>
 
         <div className='w-full h-px bg-neutral-700 my-4'></div>
@@ -40,8 +41,8 @@ function Projects() {
         </div>
         <span className='flex flex-col text-center items-center align-middle'>
           <Link to="/projects">
-            <button className='text-mustard bg-mustard/10 hover:bg-mustard/40 rounded-full transition-all duration-300 px-4 py-2 mt-6 text-lg'>
-              Show More
+            <button className='text-mustard hover:bg-mustard/40 rounded-full transition-all duration-300 px-4 py-2 mt-6 text-lg flex items-center gap-2'>
+              Show More <ArrowRight className='w-4 h-4' />
             </button>
           </Link>
         </span>
