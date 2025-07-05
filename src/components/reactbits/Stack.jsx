@@ -37,7 +37,7 @@ function CardRotate({ children, onSendToBack, sensitivity }) {
 
 export default function Stack({
   randomRotation = false,
-  sensitivity = 200,
+  sensitivity = 150,
   cardDimensions = { width: 208, height: 208 },
   cardsData = [],
   animationConfig = { stiffness: 260, damping: 20 },
@@ -75,7 +75,7 @@ export default function Stack({
     >
       {cards.map((card, index) => {
         const randomRotate = randomRotation
-          ? Math.random() * 1
+          ? Math.random(90) * 1
           : 0;
 
         return (

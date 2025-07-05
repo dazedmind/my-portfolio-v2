@@ -157,17 +157,13 @@ function AboutPage() {
                     scale={0.95}
                     threshold={0.2}
                     delay={0.1}
-                    className="flex flex-col md:flex-row justify-center items-center align-middle"
+                    className="flex flex-col md:flex-row my-12 justify-center items-center align-middle"
                 >
                     <h1 className="text-4xl md:text-5xl font-bold text-mustard">Certificates</h1>
                     <Certifications />                
                 </AnimatedContent>
                 
-                {/* <div className="w-full">
-                    <ScrollVelocity 
-                        texts={['Software Developer', 'UI/UX Designer']}
-                    />
-                </div> */}
+           
 
                 {/* Student Leadership Experience */}
                 <div className="flex flex-col gap-2 items-center justify-center w-4/5">
@@ -213,7 +209,7 @@ function AboutPage() {
                 </AnimatedContent>
                 </div>
 
-
+        
                 {/* Connect with me */}
                 <div className="my-20 flex flex-col gap-8 items-center justify-center">
                     <span className="flex items-center gap-2">
@@ -238,7 +234,11 @@ function AboutPage() {
                     </Link>
                 </div>
            
-                
+                <div className="w-full">
+                    <ScrollVelocity 
+                        texts={['Full Stack Developer', 'UI/UX Designer']}
+                    />
+                </div>
             </section>
            
         </>

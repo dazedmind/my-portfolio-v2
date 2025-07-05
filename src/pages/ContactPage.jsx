@@ -12,7 +12,7 @@ function ContactPage() {
         <section className="bg-midnight min-h-screen text-white flex flex-col md:flex-row justify-center items-center gap-4 mb-20">
             
      
-            <div className='flex flex-col justify-center items-center pt-40 md:pt-32 px-4 my-15 gap-2'>
+            <div className='flex flex-col justify-center items-center pt-40 md:pt-32 px-6 my-15 gap-2'>
                 <TrueFocus 
                     sentence="Connect with me!"
                     manualMode={false}
@@ -20,9 +20,10 @@ function ContactPage() {
                     borderColor="cyan"
                     animationDuration={0.4}
                     pauseBetweenAnimations={1}
+                    className='px-10'
                 />
                 <div className='flex flex-col md:flex-row gap-2'>
-                    <div className='mt-10'>
+                    <div className='mt-6 md:mt-10'>
                         <Contact />
                     </div>
 
