@@ -38,7 +38,7 @@ function AboutPage() {
     return (
         <>
             <section className="bg-midnight h-screen text-white">
-                <div className="flex flex-col-reverse lg:flex-row justify-around items-center pt-56 2xl:pt-64 px-6 gap-14">
+                <div className="flex flex-col-reverse lg:flex-row justify-around items-center pt-48 2xl:pt-64 px-6 gap-14">
                     <div className="z-10 flex flex-col md:justify-start md:items-start justify-center items-center">
                         <BlurText
                             text="John Allen Valeña"
