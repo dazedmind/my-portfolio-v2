@@ -8,7 +8,6 @@ import Skills from "../components/Skills";
 import { RxDoubleArrowDown } from "react-icons/rx";
 import BlurText from "../components/reactbits/BlurText";
 import AnimatedContent from "../components/AnimatedContent";
-import DecryptedText from "../components/reactbits/DecryptedText";
 import Certifications from "../components/Certifications";
 import ScrollVelocity from "../components/reactbits/ScrollVelocity";
 import Education from "../components/Education";
