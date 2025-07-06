@@ -17,17 +17,17 @@ function ContactPage() {
                     sentence="Connect with me!"
                     manualMode={false}
                     blurAmount={5}
-                    borderColor="cyan"
+                    borderColor="#CFF49E"
                     animationDuration={0.4}
                     pauseBetweenAnimations={1}
                     className='px-10'
                 />
-                <div className='flex flex-col md:flex-row gap-2'>
-                    <div className='mt-6 md:mt-10'>
+                <div className='flex flex-col-reverse md:flex-row gap-2'>
+                    <div className=' md:mt-10'>
                         <Contact />
                     </div>
 
-                    <div className='flex flex-col gap-2 mt-0 md:mt-10'>
+                    <div className='flex flex-col gap-2 mt-8 md:mt-10'>
                         <div className='flex w-full flex-row justify-start items-center border-2 border-neutral-800 rounded-md p-4 gap-2'>
                             <a href="https://www.github.com/dazedmind" target="_blank" className='flex w-full'>
                                 <span className='flex flex-row justify-between w-full items-center gap-2'>

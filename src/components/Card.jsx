@@ -8,6 +8,7 @@ const tagColors = {
   Branding: "bg-gradient-to-r from-orange-500 to-orange-600",
   Research: "bg-gradient-to-r from-amber-500 to-amber-600",
   App: "bg-gradient-to-r from-indigo-500 to-indigo-600",
+  Concept: "bg-gradient-to-r from-red-500 to-red-600",
   // Add more tags as needed
 };
 
@@ -75,6 +76,7 @@ const Card = (props) => {
           <a 
             href={props.link}
             className='inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium group-hover:gap-3 transition-all duration-300'
+            target="_blank"
           >
             View Project
             <FiExternalLink className='text-xs' />

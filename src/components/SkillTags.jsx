@@ -4,7 +4,7 @@ const SkillTags = ({ icon, name, isHighlighted, delay = 0 }) => (
   <div 
     className={`flex items-center gap-2 px-3 py-2 rounded-full border transition-all duration-500 ease-out transform ${
       isHighlighted 
-        ? 'border-mustard bg-mustard/20 shadow-mustard/50 text-mustard' 
+        ? 'border-wood bg-wood/20 shadow-wood/50 text-wood' 
         : 'border-neutral-800 bg-midnight text-neutral-300 scale-100'
     }`}
     style={{ 

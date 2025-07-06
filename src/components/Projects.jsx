@@ -22,26 +22,26 @@ function Projects() {
               name="ReVault" 
               description="A cloud repository for archiving research papers of PLM CISTM Students" 
               tags={["Website", "Research"]}                        
-              link="https://revault.vercel.app" target="_blank"/>
+              link="https://revault.vercel.app"/>
 
           <Card 
               img={accion} 
               name="Accion" 
               description="AI-Powered Accident Report System using OpenStreetMaps and CloudVision API" 
-              tags={["Research", "Design", "UI/UX"]}                        
+              tags={["Research", "App", "Design", "UI/UX"]}                        
               link="https://www.behance.net/gallery/214783583/Accion"/>
 
           <Card 
               img={hairlines} 
               name="Haribon Airlines" 
               description="A branding for Haribon Airlines, an airticket reservation website. " 
-              tags={["Branding", "Website", "Design"]}                        
+              tags={["Concept", "Website", "Branding"]}                        
               link="https://www.behance.net/gallery/212814497/Haribon-Airlines"/>
 
         </div>
         <span className='flex flex-col text-center items-center align-middle'>
           <Link to="/projects">
-            <button className='text-mustard hover:bg-mustard/40 rounded-full transition-all duration-300 px-4 py-2 mt-6 text-lg flex items-center gap-2'>
+            <button className='text-mustard hover:bg-mustard/20 rounded-full transition-all duration-300 px-4 py-2 mt-6 text-lg flex items-center gap-2'>
               Show More <ArrowRight className='w-4 h-4' />
             </button>
           </Link>

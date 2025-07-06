@@ -51,6 +51,7 @@ function Certifications() {
             cardsData={images}
             className='mt-10 '
         />
+
     </div>
   )
 }

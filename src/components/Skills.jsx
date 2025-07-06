@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaHtml5, FaJs, FaReact, FaGitAlt, FaPython, FaFigma, FaNpm, FaNodeJs, FaPhp } from 'react-icons/fa'
-import { SiTailwindcss, SiGnubash, SiAdobephotoshop, SiAdobeillustrator, SiCplusplus, SiMicrosoftoffice, SiObsstudio, SiVite, SiCanva, SiNotion, SiJirasoftware, SiNextdotjs, SiPrisma} from "react-icons/si";
+import { SiTailwindcss, SiGnubash, SiAdobephotoshop, SiAdobeillustrator, SiCplusplus, SiMicrosoftoffice, SiObsstudio, SiVite, SiCanva, SiNotion, SiJirasoftware, SiNextdotjs, SiPrisma, SiPostgresql} from "react-icons/si";
 import SkillTags from './SkillTags';
+
 
 function Skills() {
     const [activeFilter, setActiveFilter] = useState('');
     const [isAnimating, setIsAnimating] = useState(false);
+    const [isPageLoaded, setIsPageLoaded] = useState(false);
 
     const skills = [
         { icon: <FaHtml5 />, name: "HTML5", categories: ['Frontend'] },
@@ -22,17 +24,28 @@ function Skills() {
         { icon: <SiVite />, name: "Vite", categories: ['Frontend'] },
         { icon: <SiNextdotjs />, name: "Next.js", categories: ['Frontend'] },
         { icon: <SiPrisma />, name: "Prisma", categories: ['Backend'] },
-        { icon: <SiAdobephotoshop />, name: "Photoshop", categories: ['Design'] },
-        { icon: <SiAdobeillustrator />, name: "Illustrator", categories: ['Design'] },
-        { icon: <FaFigma />, name: "Figma", categories: ['Design'] },
-        { icon: <SiCanva />, name: "Canva", categories: ['Design'] },
+        { icon: <SiAdobephotoshop />, name: "Photoshop", categories: ['⚙️'] },
+        { icon: <SiAdobeillustrator />, name: "Illustrator", categories: ['⚙️'] },
+        { icon: <FaFigma />, name: "Figma", categories: ['Frontend'] },
+        { icon: <SiCanva />, name: "Canva", categories: ['⚙️'] },
         { icon: <SiMicrosoftoffice />, name: "MS Office", categories: ['⚙️'] },
-        { icon: <SiObsstudio />, name: "OBS Studio", categories: ['⚙️'] },
+        { icon: <SiPostgresql />, name: "PostgreSQL", categories: ['Backend'] },
         { icon: <SiNotion />, name: "Notion", categories: ['⚙️'] },
         { icon: <SiJirasoftware />, name: "Jira", categories: ['⚙️'] },
     ];
 
     const filters = ['All', 'Frontend', 'Backend', '⚙️'];
+
+    const onpageload = () => {
+        setActiveFilter('All');
+        setIsPageLoaded(true);
+    }
+
+    useEffect(() => {
+        onpageload();
+    }, []);
+
+   
 
     const handleFilterChange = (filter) => {
         if (filter === activeFilter) return;

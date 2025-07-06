@@ -59,7 +59,7 @@ function ProjectPage() {
                         img={hairlines} 
                         name="Haribon Airlines" 
                         description="A branding for Haribon Airlines, an airticket reservation website. " 
-                        tags={["Website", "Design", "Branding"]}                        
+                        tags={["Concept", "Website", "Branding"]}                        
                         link="https://www.behance.net/gallery/212814497/Haribon-Airlines"/>
 
                     <Card 
@@ -73,14 +73,14 @@ function ProjectPage() {
                         img={metro} 
                         name="Metro" 
                         description="A mockup user interface for an online metrocard train system" 
-                        tags={["App", "Design", "UI/UX"]}                        
+                        tags={["Concept", "App", "UI/UX"]}                        
                         link="https://www.behance.net/gallery/150317913/Metro"/>
 
                     <Card 
                         img={agfxpos} 
                         name="AGFX POS System" 
                         description="A point-of-sale system with print functionality and built-in dashboard" 
-                        tags={["Website", "Design", "UI/UX"]}                        
+                        tags={["Website", "Design"]}                        
                         link="https://www.behance.net/gallery/188504893/AGFX-Point-of-Sale-System"/>
                     
                 </div>

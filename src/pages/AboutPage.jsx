@@ -11,7 +11,6 @@ import AnimatedContent from "../components/AnimatedContent";
 import DecryptedText from "../components/reactbits/DecryptedText";
 import Certifications from "../components/Certifications";
 import ScrollVelocity from "../components/reactbits/ScrollVelocity";
-import CircularText from "../components/reactbits/CircularText";
 import Education from "../components/Education";
 import ExpCard from "../components/ExpCard";
 import RotatingText from "../components/reactbits/RotatingText";
@@ -29,9 +28,9 @@ const handleAnimationComplete = () => {
       title: "John Allen Valeña",
       subtitle: "Full Stack Developer and UI/UX Designer",
       handle: "@gtfo.allen",
-      borderColor: "#3B82F6",
-      gradient: "linear-gradient(145deg, #3B82F6, #000)",
-      url: "https://github.com/dazedmind"
+      borderColor: "#CFF49E",
+      gradient: "linear-gradient(145deg, #CFF49E, #000)",
+    //   url: "https://github.com/dazedmind"
     },
   ];
 
@@ -41,14 +40,13 @@ function AboutPage() {
             <section className="bg-midnight h-screen text-white">
                 <div className="flex flex-col-reverse lg:flex-row justify-around items-center pt-56 2xl:pt-64 px-6 gap-14">
                     <div className="z-10 flex flex-col md:justify-start md:items-start justify-center items-center">
-        
                         <BlurText
                             text="John Allen Valeña"
                             delay={200}
                             animateBy="words"
                             direction="top"
                             onAnimationComplete={handleAnimationComplete}
-                            className="text-4xl md:text-7xl font-bold text-mustard"
+                            className="text-4xl md:text-7xl text-mustard font-general-sans-semibold"
                         />
                         <p className="text-md sm:text-lg lg:text-2xl text-neutral-500">
                         Full Stack Developer and UI/UX Designer
@@ -62,7 +60,7 @@ function AboutPage() {
                             ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)"
                         >   
                             <Link to="/projects">  
-                                <button className="flex items-center gap-1 text-wood px-4 py-3 rounded-full mt-4 hover:bg-mustard/10 hover:text-mustard transition-all duration-200 ease-linear">
+                                <button className="flex items-center gap-1 text-wood px-4 py-3 rounded-full mt-4 bg-mustard/10 hover:bg-mustard/20 hover:text-mustard transition-all duration-200 ease-linear">
                                     View Projects 
                                     <ArrowRight className="w-4 h-4" />
                                 </button>
@@ -145,7 +143,7 @@ function AboutPage() {
                 </AnimatedContent>
 
                 {/* Certificates */}
-                     
+                 
                 <AnimatedContent
                     distance={60}
                     direction="vertical"
@@ -159,8 +157,9 @@ function AboutPage() {
                     delay={0.1}
                     className="flex flex-col md:flex-row my-12 justify-center items-center align-middle"
                 >
-                    <h1 className="text-4xl md:text-5xl font-bold text-mustard">Certificates</h1>
-                    <Certifications />                
+                        <h1 className="text-4xl md:text-5xl font-bold text-mustard">Certificates</h1>
+                        <Certifications />     
+          
                 </AnimatedContent>
                 
            
@@ -216,7 +215,7 @@ function AboutPage() {
                         <p className="text-3xl md:text-7xl font-bold text-white">Ready to</p>
                         <RotatingText
                             texts={['connect?', 'create?', 'innovate?']}
-                            className="text-3xl md:text-7xl font-bold bg-yale-blue/30 rounded-full px-4 py-2"
+                            className="text-3xl md:text-7xl font-bold bg-mustard/30 rounded-full px-4 py-2"
                             staggerFrom={"last"}
                             initial={{ y: "100%" }}
                             animate={{ y: 0 }}
