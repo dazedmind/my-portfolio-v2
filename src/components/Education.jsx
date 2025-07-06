@@ -11,7 +11,7 @@ const Education = () => {
                     <span>
                         <h1 className='text-xl font-bold text-wood'>Pamantasan ng Lungsod ng Maynila</h1>
                         <p className=' text-neutral-400'>2022 - Present</p>
-                        <p className=' italic text-neutral-600'>Bachelor of Science in Information Technology</p>
+                        <p className=' italic text-sm md:text-lg text-neutral-600'>Bachelor of Science in Information Technology</p>
                     </span>
                 
                 </div>
@@ -20,7 +20,7 @@ const Education = () => {
                     <span>
                         <h1 className='text-xl font-bold text-wood'>Chinese General Hospital Colleges</h1>
                         <p className=' text-neutral-400'>2020 - 2022</p>
-                        <p className=' italic text-neutral-600'>Science, Technology, Engineering and Mathematics</p>
+                        <p className=' italic text-sm md:text-lg text-neutral-600'>Science, Technology, Engineering and Mathematics</p>
                     </span>
                 </div>
             

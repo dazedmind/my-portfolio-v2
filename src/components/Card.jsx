@@ -14,7 +14,7 @@ const tagColors = {
 
 const Card = (props) => {
   return (
-    <div className='group bg-midnight shadow-xl hover:shadow-2xl rounded-md overflow-hidden w-auto xl:w-96 h-auto transform hover:-translate-y-2 transition-all duration-300 ease-out border border-neutral-700'>
+    <div className='group bg-midnight shadow-xl hover:shadow-2xl rounded-xl overflow-hidden w-auto xl:w-96 h-auto transform hover:-translate-y-2 transition-all duration-300 ease-out border border-neutral-700'>
       
       {/* Image Section with Overlay */}
       <div className='relative overflow-hidden'>
@@ -39,7 +39,7 @@ const Card = (props) => {
       </div>
 
       {/* Content Section */}
-      <div className='p-6 space-y-4'>
+      <div className='p-6 space-y-2'>
         
         {/* Title */}
         <div className='flex items-center justify-between'>

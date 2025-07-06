@@ -71,7 +71,7 @@ function Skills() {
     };
 
     return (
-        <div className='bg-midnight p-6 w-5/6 md:w-3/4 rounded-lg border-2 border-neutral-800'>
+        <div className='bg-midnight p-6 w-5/6 md:w-3/4 rounded-xl border-2 border-neutral-800'>
             <style jsx>{`
                 @keyframes fadeInUp {
                     from {

@@ -1,5 +1,6 @@
 import React from 'react'
 import { GoBriefcase, GoClock } from 'react-icons/go'
+import SpotlightCard from './reactbits/SpotlightCard'
 
 const truncateDescription = (description) => {
     if (description.length > 100) {
@@ -10,7 +11,8 @@ const truncateDescription = (description) => {
 
 function ExpCard(props) {
   return (
-    <div className="border-2 border-neutral-700 rounded-lg p-4 md:w-3/4 hover:bg-mustard/30 transition-all duration-300 ease-linear cursor-pointer">
+    // <div className="border-2 border-neutral-700 rounded-lg p-4 md:w-3/4 hover:bg-mustard/30 transition-all duration-300 ease-linear cursor-pointer">
+        <SpotlightCard className="custom-spotlight-card border-2 border-neutral-700 rounded-lg p-2 md:w-3/4  transition-all duration-300 ease-linear cursor-pointer" spotlightColor="rgba(54, 93, 56, 0.6)">
         <div className="flex flex-col justify-start gap-1">
             <p className="text-md text-neutral-500 font-mono">{props.number}</p>
             <h2 className="text-xl font-bold text-green-100">{props.position}</h2>
@@ -24,7 +26,8 @@ function ExpCard(props) {
                 {truncateDescription(props.description)}
             </p>
         </div>
-    </div>
+        </SpotlightCard>
+    // </div>
   )
 }
 

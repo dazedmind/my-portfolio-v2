@@ -34,9 +34,11 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="hidden md:flex justify-center items-center align-middle bg-neutral-900/30 backdrop-blur-md fixed  p-4 px-8 rounded-full z-10 top-6 left-32 transform -translate-x-1/2">
-        <img src={logo} alt="avatar" className="w-10 h-6 rounded-full" />
-      </div>
+      <NavLink to="/">
+        <div className="hidden md:flex justify-center items-center align-middle hover:scale-105 transition-all duration-300 ease-in-out hover:bg-mustard/10 bg-neutral-900/30 backdrop-blur-md fixed  p-4 px-8 rounded-full z-10 top-6 left-32 transform -translate-x-1/2">
+          <img src={logo} alt="avatar" className="w-10 h-6 rounded-full" />
+        </div>
+      </NavLink>
 
       <nav className="flex justify-center items-center align-middle rounded-full w-auto max-w-2xl p-4 px-8 bg-neutral-900/30 backdrop-blur-md text-white fixed top-6 left-1/2 transform -translate-x-1/2 z-100">
         <div className="relative w-full">

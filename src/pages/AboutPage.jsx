@@ -17,7 +17,8 @@ import RotatingText from "../components/reactbits/RotatingText";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ChromaGrid from "../components/reactbits/ChromaGrid";
-
+import ShinyText
+ from "../components/reactbits/ShinyText";
 const handleAnimationComplete = () => {
     console.log('Animation completed!');
   };
@@ -48,9 +49,10 @@ function AboutPage() {
                             onAnimationComplete={handleAnimationComplete}
                             className="text-4xl md:text-7xl text-mustard font-general-sans-semibold"
                         />
-                        <p className="text-md sm:text-lg lg:text-2xl text-neutral-500">
-                        Full Stack Developer and UI/UX Designer
-                        </p>
+                        <ShinyText text="Full Stack Developer and UI/UX Designer" disabled={false} speed={5} className='text-md sm:text-lg lg:text-2xl mt-2' />
+                        {/* <p className="text-md sm:text-lg lg:text-2xl text-neutral-500">
+                            Full Stack Developer and UI/UX Designer
+                        </p> */}
                         
                         <AnimatedContent
                             distance={60}

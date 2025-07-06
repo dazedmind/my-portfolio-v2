@@ -37,14 +37,14 @@ function ProjectPage() {
                     <Card 
                         img={revault} 
                         name="ReVault" 
-                        description="A cloud repository for archiving research papers of PLM CISTM Students" 
+                        description="A cloud repository for archiving research papers of PLM CISTM Students using Information Retrieval Scoring Algorithm" 
                         tags={["Website", "Research"]}                        
                         link="https://revault.vercel.app" target="_blank"/>
 
                     <Card 
                         img={lookback} 
                         name="2024 LOOK BACK" 
-                        description="My creations throughout January - December 2024" 
+                        description="My graphic and UI/UX design creations throughout January - December 2024" 
                         tags={["Portfolio"]}                        
                         link="https://www.behance.net/gallery/216485021/2024-LOOK-BACK"/>
 
