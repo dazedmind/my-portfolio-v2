@@ -30,18 +30,12 @@ function Contact() {
                   <input type="text" placeholder='Name' name="name" id="name" className='p-3 w-auto md:w-96 rounded-md outline-none bg-midnight border-2 border-neutral-700 text-white' required/>
                   <input type="email" placeholder='Email' name="email" id="email" className='p-3 w-auto md:w-96 rounded-md outline-none bg-midnight border-2 border-neutral-700 text-white' required/>
                   <textarea name="message" id="message" cols="10" rows="5" placeholder='Tell me about it...' className='p-3 rounded-md outline-none bg-midnight border-2 border-neutral-700 text-white' required></textarea>
-                  {/* <HCaptcha
+                  <HCaptcha
                     sitekey={siteKey}
                     onVerify={(token,ekey) => handleVerificationSuccess(token, ekey)}
                     theme='dark'
               
-                  /> */}
-                     <div
-                      id="hcaptcha"
-                      class="h-captcha"
-                      data-sitekey={siteKey}
-                      data-callback="onSubmit"
-                    ></div>
+                  />
                   <span className='flex flex-col items-center'>
                       <button type="submit" className='bg-mustard/20 hover:bg-mustard/40 transition-all duration-300 rounded-full text-lg px-8 py-2 cursor-pointer font-bold text-mustard'>Send</button>
                   </span>
