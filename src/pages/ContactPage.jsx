@@ -1,10 +1,8 @@
 import React from 'react'
 import Contact from '../components/Contact'
 import { FaGithub, FaLinkedin, FaBehance, FaInstagram } from 'react-icons/fa'
-import SplitText from "../components/reactbits/SplitText";
-import BlurText from '../components/reactbits/BlurText';
 import TrueFocus from '../components/reactbits/TrueFocus';
-import { GoLink, GoLinkExternal } from 'react-icons/go';
+import { GoLinkExternal } from 'react-icons/go';
 
 function ContactPage() {
   return (

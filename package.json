@@ -10,6 +10,7 @@
     "build:css": "tailwind build src/index.css -o src/main.css"
   },
   "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^1.12.0",
     "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.0",
@@ -19,6 +20,7 @@
     "ogl": "^1.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-google-recaptcha": "^3.1.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.29.0",
     "styled-components": "^6.1.8",
