@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import avatar from "../img/profile-av.jpg";
 import avatar2 from "../img/profile-portrait.jpg";
+import logo from "../img/personal-logo-nobg.png";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
@@ -16,8 +17,8 @@ import RotatingText from "../components/reactbits/RotatingText";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ChromaGrid from "../components/reactbits/ChromaGrid";
-import ShinyText
- from "../components/reactbits/ShinyText";
+import ShinyText from "../components/reactbits/ShinyText";
+
 const handleAnimationComplete = () => {
     console.log('Animation completed!');
   };
@@ -30,7 +31,6 @@ const handleAnimationComplete = () => {
       handle: "@gtfo.allen",
       borderColor: "#CFF49E",
       gradient: "linear-gradient(145deg, #CFF49E, #000)",
-    //   url: "https://github.com/dazedmind"
     },
   ];
 
@@ -48,11 +48,9 @@ function AboutPage() {
                             onAnimationComplete={handleAnimationComplete}
                             className="text-4xl md:text-7xl text-mustard font-general-sans-semibold"
                         />
-                        <ShinyText text="Full Stack Developer and UI/UX Designer" disabled={false} speed={5} className='text-md sm:text-lg lg:text-2xl mt-2' />
-                        {/* <p className="text-md sm:text-lg lg:text-2xl text-neutral-500">
-                            Full Stack Developer and UI/UX Designer
-                        </p> */}
-                        
+                        <ShinyText text="Full Stack Developer and UI/UX Designer" disabled={false} speed={3} className='text-md sm:text-lg lg:text-2xl mt-2' />
+           
+                     
                         <AnimatedContent
                             distance={60}
                             direction="vertical"
@@ -70,7 +68,7 @@ function AboutPage() {
                         </AnimatedContent>
                         
                     </div>
-
+                    
                     <img src={avatar} alt="av" className="rounded-full w-44 lg:w-56 z-10" />
                 </div>
 
@@ -90,9 +88,9 @@ function AboutPage() {
 
             <section id="about" className="text-neutral-300 flex flex-col justify-start items-center w-auto mt-36 mb-10 gap-14">
                 <div className="flex flex-col md:flex-row justify-center items-start w-4/5 gap-8">
-         
+                    
+                    {/* ABOUT SECTION */}
                     <div className="flex flex-col justify-center items-center">
-                        {/* <img src={avatar} alt="av" className="rounded-md w-80 z-10" /> */}
                         <ChromaGrid 
                             items={items}
                             radius={300}
